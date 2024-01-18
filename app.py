@@ -65,7 +65,7 @@ def create_conversational_chain(vector_store):
                         #model_type="llama", config={'max_new_tokens': 500, 'temperature': 0.01})
     llm = Replicate(
         streaming = True,
-        model = "meta/llama-2-7b-chat:f1d50bb24186c52daae319ca8366e53debdaa9e0ae7ff976e918df752732ccc4", 
+        model = "meta/llama-2-70b-chat:2d19859030ff705a87c746f7e96eea03aefb71f166725aee39692f1476566d48", 
         callbacks=[StreamingStdOutCallbackHandler()],
         model_kwargs = {"temperature": 0.01, "max_length" :500,"top_p":1})
     memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
